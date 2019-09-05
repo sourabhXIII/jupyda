@@ -12,7 +12,8 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/sourabhXIII/jupyda",
-    packages=setuptools.find_packages(),
+    py_modules=['jupyda.py', 'src.magic_jupyda.py']
+    # packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
