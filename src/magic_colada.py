@@ -17,9 +17,9 @@ def print_byte_stream(bstream):
 
 
 @magics_class
-class Colada(Magics):
+class Jupyda(Magics):
     def __init__(self, shell):
-        super(Colada, self).__init__(shell)
+        super(Jupyda, self).__init__(shell)
         
         # try to get the compiler first
         try:
@@ -70,7 +70,7 @@ class Colada(Magics):
     @argument('-n', '--name', type=str, help='entire cell content will be saved in file with this name.')
     @argument('-nc', '--no_compile', help='save the file. ideally should be a .h file.', action="store_true")
     @cell_magic
-    def colada(self, line, cell=None):
+    def jupyda(self, line, cell=None):
         """Saves this cells content in a file with the given name (optional).
             Compiles it.
             Runs it if not used with -oc argument.
@@ -82,7 +82,7 @@ class Colada(Magics):
             return
         
         # parser for the arguments
-        args = parse_argstring(self.colada, line)
+        args = parse_argstring(self.jupyda, line)
         filename = args.name
         nc = args.no_compile
         
@@ -93,7 +93,7 @@ class Colada(Magics):
         # check for legal file extensions
         ext = filename.split('.')[1]
         if ext not in ['cu', 'h']:
-            print("Colada can handle only .cu and .h files. Please correct the extension [{}].".format(ext))
+            print("Jupyda can handle only .cu and .h files. Please correct the extension [{}].".format(ext))
             return
         if (ext == 'h') and (nc is False):
             print("Can't compile .h files. Use -nc argument.")
@@ -119,4 +119,4 @@ class Colada(Magics):
             
 # register the magics function
 ip = get_ipython()
-ip.register_magics(Colada)
+ip.register_magics(Jupyda)
