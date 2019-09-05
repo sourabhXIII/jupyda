@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="jupyda",
-    version="0.0.3",
+    version="0.0.4",
     author="Sourabh Maity",
     author_email="no-one@no-where.com",
     description="IPython magic extension to run CUDA C code on jupyter notebooks.",
