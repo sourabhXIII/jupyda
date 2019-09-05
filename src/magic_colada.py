@@ -116,7 +116,4 @@ class Jupyda(Magics):
                 print_byte_stream(cpe.output)
             print_byte_stream(output)
 
-            
-# register the magics function
-ip = get_ipython()
-ip.register_magics(Jupyda)
+ 
