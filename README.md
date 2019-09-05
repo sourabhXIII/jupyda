@@ -1,4 +1,4 @@
-# colada
+# jupyda
 Ipython extension to execute CUDA C code in Jupyter notebook.
 Now you can easily use the power of Google colab GPUs with your CUDA C code.
 
