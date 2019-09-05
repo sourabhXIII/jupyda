@@ -23,7 +23,7 @@ class Jupyda(Magics):
         
         # try to get the compiler first
         try:
-            self.compiler = subprocess.check_output(['which', 'gcc']
+            self.compiler = subprocess.check_output(['which', 'nvcc']
                 , stderr=subprocess.STDOUT).decode().split('\n')[0]
         except CalledProcessError as cpe:
             print("Looks like the compiler doesn't exist.")

@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="jupyda",
-    version="0.0.5",
+    version="0.0.7",
     author="Sourabh Maity",
     author_email="no-one@no-where.com",
     description="IPython magic extension to run CUDA C code on jupyter notebooks.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/sourabhXIII/jupyda",
-    py_modules=['jupyda.py', 'src.magic_jupyda.py']
+    py_modules=['jupyda', 'src.magic_jupyda'],
     # packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
